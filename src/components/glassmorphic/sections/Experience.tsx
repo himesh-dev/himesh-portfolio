@@ -1,51 +1,5 @@
-
-import React from 'react';
 import { GlassPanel } from '../ui/GlassPanel';
-
-const experiences = [
-    {
-        role: 'Senior Engineer',
-        company: 'Tech Corp Inc.',
-        period: '2020 - Present',
-        description: [
-            'Led a team of 5 frontend devs.',
-            'Improved site performance by 40%.'
-        ],
-        color: 'bg-blue-500',
-        borderColor: 'border-l-blue-500',
-        icon: 'apartment',
-        iconColor: 'text-blue-500',
-        iconBg: 'bg-blue-500/10'
-    },
-    {
-        role: 'Frontend Developer',
-        company: 'Startup Flow',
-        period: '2018 - 2020',
-        description: [
-            'Built main product dashboard from scratch.',
-            'Implemented complex data visualizations.'
-        ],
-        color: 'bg-purple-500',
-        borderColor: 'border-l-purple-500',
-        icon: 'rocket_launch',
-        iconColor: 'text-purple-500',
-        iconBg: 'bg-purple-500/10'
-    },
-    {
-        role: 'Jr. Web Developer',
-        company: 'Creative Agency',
-        period: '2016 - 2018',
-        description: [
-            'Maintained 20+ client websites.',
-            'Converted PSDs to responsive HTML/CSS.'
-        ],
-        color: 'bg-teal-500',
-        borderColor: 'border-l-teal-500',
-        icon: 'code',
-        iconColor: 'text-teal-500',
-        iconBg: 'bg-teal-500/10'
-    }
-];
+import { portfolioData } from '../../../config/data';
 
 export const Experience = () => {
     return (
@@ -66,7 +20,7 @@ export const Experience = () => {
             </div>
 
             <div className="flex overflow-x-auto pb-4 gap-6 scrollbar-hide snap-x snap-mandatory">
-                {experiences.map((exp, index) => (
+                {portfolioData.experience.map((exp, index) => (
                     <GlassPanel
                         key={index}
                         className={`min-w-[340px] p-8 snap-start border-l-4 ${exp.borderColor} hover:bg-white/5 transition-colors cursor-pointer group`}

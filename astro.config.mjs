@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
-import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
@@ -10,13 +9,16 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
 
-  adapter: node({
-    mode: 'standalone',
-  }),
+  // adapter: node({
+  //   mode: 'standalone',
+  // }),
 
-  site: 'https://himesh-portfolio.com',
+  // Replace with your own domain or GitHub Pages URL
+  site: 'https://himesh-dev.github.io',
+  base: '/himesh-portfolio', 
+  
   integrations: [react(), sitemap(), robotsTxt()],
 
   vite: {

@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { ScrollProgress } from '../ui/ScrollProgress';
+import { portfolioData } from '../../../config/data';
 
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,16 +10,16 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-accent-purple-dark flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-accent-purple-dark/20">
-                        HK
+                        {portfolioData.navbar.initials}
                     </div>
-                    <span className="text-white font-bold tracking-tight text-lg hidden sm:block">HIMESH KUMAR</span>
+                    <span className="text-white font-bold tracking-tight text-lg hidden sm:block">{portfolioData.navbar.name}</span>
                 </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
-                    {['About', 'Experience', 'Skills', 'Contact'].map((item) => (
-                        <a key={item} className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group" href={`#${item.toLowerCase()}`}>
-                            {item}
+                    {portfolioData.navbar.links.map((item) => (
+                        <a key={item.name} className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group" href={item.href}>
+                            {item.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-purple-dark transition-all group-hover:w-full"></span>
                         </a>
                     ))}
@@ -44,9 +44,9 @@ export const Navbar = () => {
             {/* Mobile Menu Dropdown - basic implementation */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full glass-header p-4 flex flex-col gap-4 border-t border-white/5">
-                    {['About', 'Experience', 'Skills', 'Contact'].map((item) => (
-                        <a key={item} className="text-sm font-medium text-slate-300 hover:text-white" href={`#${item.toLowerCase()}`}>
-                            {item}
+                    {portfolioData.navbar.links.map((item) => (
+                        <a key={item.name} className="text-sm font-medium text-slate-300 hover:text-white" href={item.href}>
+                            {item.name}
                         </a>
                     ))}
                 </div>

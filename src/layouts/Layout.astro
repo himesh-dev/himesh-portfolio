@@ -1,11 +1,12 @@
 ---
+import { portfolioData } from '../config/data';
 import '../styles/global.css';
 
 interface Props {
 	title?: string;
 }
 
-const { title = "Himesh Kumar - Senior Frontend Engineer" } = Astro.props;
+const { title = `${portfolioData.hero.name} ${portfolioData.hero.surname} - ${portfolioData.hero.title}` } = Astro.props;
 ---
 
 <!doctype html>
