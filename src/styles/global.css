@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #050505;
+  --color-card-dark: #0a0a0a;
+  --color-accent-purple: #a855f7;
+  --color-accent-purple-dark: #7e22ce;
+
+  --font-display: "Inter", sans-serif;
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --animate-text-cycle: textCycle 8s infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scroll-shrink-hero: shrinkHero linear both;
+  --animate-scroll-fade-content: fadeContent linear both;
+  --animate-scroll-reveal-card: revealCard linear both;
+
+  @keyframes textCycle {
+    0%, 20% { opacity: 1; transform: translateY(0); }
+    25%, 95% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shrinkHero {
+    to {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      opacity: 0.9;
+      transform: scale(0.98);
+    }
+  }
+
+  @keyframes fadeContent {
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+
+  @keyframes revealCard {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(15, 15, 15, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-header {
+  background: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-highlight {
+  background: rgba(59, 130, 246, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

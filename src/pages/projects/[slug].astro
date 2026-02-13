@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+
+const { slug } = Astro.params;
+
+if (!slug) {
+    return Astro.redirect("/404");
+}
+
+const project = await getEntry("projects", slug);
+
+if (!project) {
+    return Astro.redirect("/404");
+}
+
+const { Content } = await render(project);
+---
+
+<html lang="en">
+    <head>
+        <BaseHead
+            title={project.data.title}
+            description={project.data.description}
+            image={project.data.ogImage}
+        />
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>{project.data.title}</h1>
+                <Content />
+            </article>
+        </main>
+    </body>
+</html>
