@@ -19,8 +19,8 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         env:
-          # Dynamic base path for the preview: /repo-name/umbrella-dir/pr-number
-          BASE_PATH: /himesh-portfolio/pr-previews/pr-${{ github.event.number }}
+          # Dynamic base path for the preview: /umbrella-dir/pr-number
+          BASE_PATH: /pr-previews/pr-${{ github.event.number }}
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
