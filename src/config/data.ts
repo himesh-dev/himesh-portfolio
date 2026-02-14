@@ -1,3 +1,5 @@
+import himesh from '../assets/himesh.png';
+
 export const portfolioData = {
     navbar: {
         initials: "HK",
@@ -18,7 +20,7 @@ export const portfolioData = {
             color: "purple", // Used for logic if needed
         },
         description: "Specializing in Design Systems & Developer Experience (DX). With 7.5+ years of experience building scalable applications at TikTok and PayPal. I bridge the gap between complex engineering and intuitive user interfaces.",
-        image: "/himesh.png",
+        image: himesh.src,
         socials: [
             { name: "Email Me", icon: "mail", action: "mailto:himesh@example.com" }, // Update with real email
             { name: "Call", icon: "call", action: "tel:+1234567890" }, // Update with real phone
