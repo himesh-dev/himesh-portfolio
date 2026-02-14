@@ -48,8 +48,8 @@ export const Hero = () => {
                                     key={item.name}
                                     href={item.action}
                                     className={`px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-2 cursor-pointer ${item.name === 'LinkedIn'
-                                            ? 'bg-[#0077b5] hover:bg-[#006396] text-white shadow-lg shadow-blue-900/20'
-                                            : 'border border-white/20 hover:border-white/40 text-white bg-transparent hover:bg-white/5'
+                                        ? 'bg-[#0077b5] hover:bg-[#006396] text-white shadow-lg shadow-blue-900/20'
+                                        : 'border border-white/20 hover:border-white/40 text-white bg-transparent hover:bg-white/5'
                                         }`}
                                 >
                                     {item.name === 'LinkedIn' ? (
