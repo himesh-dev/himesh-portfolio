@@ -10,14 +10,10 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-
-  // adapter: node({
-  //   mode: 'standalone',
-  // }),
-
+ 
   // Replace with your own domain or GitHub Pages URL
-  site: 'https://himesh-dev.github.io/himesh-portfolio' ,
-  // base: process.env.BASE_PATH, 
+  site: 'https://himesh-dev.github.io' ,
+  base: '/himesh-portfolio', 
   
   integrations: [react(), sitemap(), robotsTxt()],
 
