@@ -17,7 +17,7 @@ export default defineConfig({
 
   // Replace with your own domain or GitHub Pages URL
   site: 'https://himesh-dev.github.io' ,
-  base: '/himesh-portfolio', 
+  base: process.env.BASE_PATH, 
   
   integrations: [react(), sitemap(), robotsTxt()],
 

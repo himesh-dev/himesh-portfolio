@@ -1,0 +1,34 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        env:
+          # Dynamic base path for the preview: /repo-name/pr-number
+          BASE_PATH: /himesh-portfolio/pr-${{ github.event.number }}
+        # with:
+          # path: . # The root location of your Astro project inside the repository. (optional)
+          # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+          # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+
+      - name: Deploy Preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: dist/
+          preview-branch: gh-pages
+          umbrella-dir: pr-previews
+          action: auto
