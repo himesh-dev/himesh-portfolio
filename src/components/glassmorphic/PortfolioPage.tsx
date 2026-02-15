@@ -10,7 +10,7 @@ import '../../styles/global.css';
 
 export const PortfolioPage = () => {
     return (
-        <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300 font-sans selection:bg-purple-500/30">
+        <div className="min-h-screen bg-bg-primary text-text-primary transition-colors duration-300 font-sans selection:bg-purple-500/30">
             {/* Ambient Background */}
             <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse"></div>

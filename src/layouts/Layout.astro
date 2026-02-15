@@ -17,22 +17,6 @@ const { title = `${heroData.name} ${heroData.surname} - ${heroData.title}` } = A
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={favicon.src} />
 
-		<script is:inline>
-			// Check for saved theme preference, otherwise default to Dark
-			const theme = (() => {
-				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-					return localStorage.getItem('theme');
-				}
-				return 'dark'; // Default to dark as per user preference
-			})();
-
-			if (theme === 'dark') {
-				document.documentElement.classList.add('dark');
-			} else {
-				// Ensure it's explicitly removed if not dark
-				document.documentElement.classList.remove('dark');
-			}
-		</script>
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,7 +27,7 @@ const { title = `${heroData.name} ${heroData.surname} - ${heroData.title}` } = A
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-gradient-to-br from-indigo-50/50 via-white to-cyan-50/50 dark:bg-none text-slate-900 dark:bg-background-dark dark:text-white font-display overflow-x-hidden min-h-screen selection:bg-primary selection:text-white transition-colors duration-300">
+	<body class="bg-bg-primary text-text-primary font-display overflow-x-hidden min-h-screen selection:bg-primary selection:text-white transition-colors duration-300">
 		<slot />
 	</body>
 </html>
