@@ -22,6 +22,8 @@ export default defineConfig({
     robotsTxt(),
     AstroPWA({
       registerType: 'autoUpdate',
+      base: '/himesh-portfolio/',
+      scope: '/himesh-portfolio/',
       includeAssets: ['favicon.svg'],
       manifest: {
         name: 'Himesh Kumar - Portfolio',
