@@ -157,6 +157,7 @@
   border: 1px solid var(--glass-input-border);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  border-radius: 0.5rem; /* rounded-lg */
 }
 
 .glass-input:focus {

@@ -20,10 +20,22 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       
+      - name: Verify Secret Presence
+        run: |
+          if [ -n "$PUBLIC_WEB3FORMS_ACCESS_KEY" ]; then
+            echo "Public Web3Forms key is set (length: ${#PUBLIC_WEB3FORMS_ACCESS_KEY} characters)"
+          else
+            echo "Public Web3Forms key is NOT set"
+            exit 1 # Fail fast if secret is missing, or remove if you want to proceed anyway
+          fi
+        env:
+          PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_ACCESS_KEY }}
+
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         env:
           BASE_PATH: /himesh-portfolio
+          PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_ACCESS_KEY }}
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)

@@ -13,11 +13,11 @@ export const TechStack = () => {
             <div className="glass-panel p-8 rounded-xl h-[calc(100%-4rem)] flex flex-col justify-center border border-black/5 dark:border-white/5 bg-gradient-to-br from-white/50 dark:from-white/5 to-transparent">
                 <div className="grid grid-cols-3 gap-6 place-items-center">
                     {techStackData.map((tech) => (
-                        <div key={tech.label} className="group relative flex flex-col items-center justify-center gap-2 transition-transform hover:-translate-y-1 duration-300">
-                            <div className={`w-16 h-16 hexagon bg-white/10 dark:bg-[#1a1a1a] flex items-center justify-center ${tech.bgHoverColorClass} transition-colors shadow-lg border-2 border-slate-300 dark:border-slate-800 ${tech.borderColorClass}`}>
+                        <div key={tech.label} className="group relative z-10 hover:z-50 flex flex-col items-center justify-center gap-2 transition-transform hover:-translate-y-1 duration-300">
+                            <div className={`w-16 h-16 rounded-2xl bg-white/10 dark:bg-[#1a1a1a] flex items-center justify-center ${tech.bgHoverColorClass} transition-colors shadow-lg border-2 border-slate-300 dark:border-slate-800 ${tech.borderColorClass}`}>
                                 <tech.Icon className={`text-xl ${tech.colorClass} group-hover:text-white font-bold`} />
                             </div>
-                            <span className={`font-bold text-xs ${tech.colorClass} group-hover:text-primary dark:group-hover:text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity absolute top-full`}>{tech.label}</span>
+                            <span className={`font-bold text-xs ${tech.colorClass} group-hover:text-primary dark:group-hover:text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity absolute top-full whitespace-nowrap bg-black/80 px-2 py-1 rounded backdrop-blur-sm pointer-events-none`}>{tech.label}</span>
                         </div>
                     ))}
                 </div>

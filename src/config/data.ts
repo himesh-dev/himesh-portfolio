@@ -1,7 +1,8 @@
 import himesh from '../assets/himesh.png';
-import { SiTiktok, SiPaypal, SiReact, SiTypescript, SiNextdotjs, SiNodedotjs, SiGithubactions, SiVite } from 'react-icons/si';
-import { FaMoneyBillWave, FaShoppingCart, FaCode } from 'react-icons/fa';
-import { MdMovie, MdPalette, MdSpeed } from 'react-icons/md';
+import { SiTiktok, SiPaypal, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiNodedotjs, SiGithubactions, SiVite, SiStorybook } from 'react-icons/si';
+import { FaMoneyBillWave, FaShoppingCart, FaCode, FaProjectDiagram } from 'react-icons/fa';
+import { MdMovie, MdPalette, MdSpeed, MdViewQuilt, MdGroups, MdAutorenew } from 'react-icons/md';
+import { SiScrumalliance, SiJira } from 'react-icons/si';
 
 export const navbarData = {
     initials: "HK",
@@ -151,6 +152,19 @@ export const techStackData = [
     { label: "Performance", Icon: MdSpeed, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "CI/CD", Icon: SiGithubactions, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
     { label: "Webpack/Vite", Icon: SiVite, colorClass: "text-yellow-500", hoverColorClass: "group-hover:text-yellow-500", bgHoverColorClass: "group-hover:bg-yellow-700", borderColorClass: "group-hover:border-yellow-500" },
+    { label: "JavaScript", Icon: SiJavascript, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
+    { label: "Storybook", Icon: SiStorybook, colorClass: "text-pink-500", hoverColorClass: "group-hover:text-pink-500", bgHoverColorClass: "group-hover:bg-pink-700", borderColorClass: "group-hover:border-pink-500" },
+    { label: "Component Libs", Icon: MdViewQuilt, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
+];
+
+
+
+export const skillsData = [
+    { label: "Team Management", Icon: MdGroups, colorClass: "text-purple-400", hoverColorClass: "group-hover:text-purple-400", bgHoverColorClass: "group-hover:bg-purple-600", borderColorClass: "group-hover:border-purple-400" },
+    { label: "End-to-End SDLC", Icon: MdAutorenew, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
+    { label: "Software Architecture", Icon: FaProjectDiagram, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
+    { label: "Agile", Icon: SiJira, colorClass: "text-blue-500", hoverColorClass: "group-hover:text-blue-500", bgHoverColorClass: "group-hover:bg-blue-700", borderColorClass: "group-hover:border-blue-500" },
+    { label: "Scrum", Icon: SiScrumalliance, colorClass: "text-green-500", hoverColorClass: "group-hover:text-green-500", bgHoverColorClass: "group-hover:bg-green-700", borderColorClass: "group-hover:border-green-500" },
 ];
 
 export const latestProjectData = {
@@ -175,5 +189,6 @@ export const portfolioData = {
     experience: experienceData,
     education: educationData,
     techStack: techStackData,
+    skills: skillsData,
     latestProject: latestProjectData
 };

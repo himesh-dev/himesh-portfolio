@@ -3,6 +3,7 @@ import { Hero } from './sections/Hero';
 import { Experience } from './sections/Experience';
 import { Education } from './sections/Education';
 import { TechStack } from './sections/TechStack';
+import { Skills } from './sections/Skills';
 import { LatestProject } from './sections/LatestProject';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
@@ -33,6 +34,10 @@ export const PortfolioPage = () => {
 
                 <div className="mb-8">
                     <Education />
+                </div>
+
+                <div className="mb-8">
+                    <Skills />
                 </div>
 
                 <div className="mb-8">
