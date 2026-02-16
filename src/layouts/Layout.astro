@@ -1,5 +1,6 @@
 ---
 import favicon from '../assets/favicon.svg';
+import profileImage from '../assets/himesh.jpg';
 import { heroData } from '../config/data';
 import '../styles/global.css';
 
@@ -12,7 +13,7 @@ interface Props {
 const { 
 	title = `${heroData.name} ${heroData.surname} - ${heroData.title}`,
 	description = heroData.description,
-	image = '/pwa-512x512.png'
+	image = profileImage.src
 } = Astro.props;
 ---
 
