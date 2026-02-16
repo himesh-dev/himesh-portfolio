@@ -3,6 +3,7 @@ import favicon from '../assets/favicon.svg';
 import profileImage from '../assets/himesh.jpg';
 import { heroData } from '../config/data';
 import '../styles/global.css';
+import { PWAInstallPrompt } from '../components/pwa/PWAInstallPrompt';
 
 interface Props {
 	title?: string;
@@ -67,5 +68,6 @@ const {
 	</head>
 	<body class="bg-bg-primary text-text-primary font-display overflow-x-hidden min-h-screen selection:bg-primary selection:text-white transition-colors duration-300">
 		<slot />
+		<PWAInstallPrompt client:load />
 	</body>
 </html>
