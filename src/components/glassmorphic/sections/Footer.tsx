@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="relative z-10 glass-header border-t border-white/10 mt-auto">
             <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-white/5 pb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/5 pb-12">
                     <div className="md:col-span-1 space-y-4">
                         <div className="flex items-center gap-3 mb-2">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-primary/20">
@@ -29,15 +29,7 @@ export const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="md:col-span-1">
-                        <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h3>
-                        <ul className="space-y-3">
-                            <li><a href="#" className="text-slate-400 hover:text-white hover:translate-x-1 transition-all inline-block text-sm">Web Development</a></li>
-                            <li><a href="#" className="text-slate-400 hover:text-white hover:translate-x-1 transition-all inline-block text-sm">UI/UX Design</a></li>
-                            <li><a href="#" className="text-slate-400 hover:text-white hover:translate-x-1 transition-all inline-block text-sm">Frontend Architecture</a></li>
-                            <li><a href="#" className="text-slate-400 hover:text-white hover:translate-x-1 transition-all inline-block text-sm">Technical Consulting</a></li>
-                        </ul>
-                    </div>
+
 
                     <div className="md:col-span-1">
                         <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Socials</h3>

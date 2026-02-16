@@ -1,4 +1,5 @@
 import { ContactForm } from '../components/ContactForm';
+import { heroData } from '../../../config/data';
 
 export const Contact = () => {
     return (
@@ -27,16 +28,16 @@ export const Contact = () => {
                                 I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
                             </p>
 
-                            <div className="space-y-6">
-                                <div className="flex items-center gap-4 group/item">
+                            <div className="flex flex-col gap-6">
+                                <a href={`mailto:${heroData.email}`} className="flex items-center gap-4 group/item hover:bg-white/5 p-3 -m-3 rounded-xl transition-all duration-300 cursor-pointer">
                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 group-hover/item:text-purple-400 group-hover/item:bg-purple-500/10 group-hover/item:border-purple-500/20 transition-all duration-300">
                                         <span className="material-icons">email</span>
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500 font-medium mb-0.5">Mail me at</p>
-                                        <a className="text-white hover:text-purple-400 transition-colors font-medium text-lg" href="mailto:hello@himeshkumar.dev">hello@himeshkumar.dev</a>
+                                        <span className="text-white group-hover/item:text-purple-400 transition-colors font-medium text-lg">{heroData.email}</span>
                                     </div>
-                                </div>
+                                </a>
 
                                 <div className="flex items-center gap-4 group/item">
                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 group-hover/item:text-blue-400 group-hover/item:bg-blue-500/10 group-hover/item:border-blue-500/20 transition-all duration-300">
@@ -44,7 +45,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500 font-medium mb-0.5">Location</p>
-                                        <p className="text-white font-medium text-lg">San Francisco, CA</p>
+                                        <p className="text-white font-medium text-lg">{heroData.location}</p>
                                     </div>
                                 </div>
                             </div>

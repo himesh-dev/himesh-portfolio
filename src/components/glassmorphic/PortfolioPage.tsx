@@ -4,7 +4,8 @@ import { Experience } from './sections/Experience';
 import { Education } from './sections/Education';
 import { TechStack } from './sections/TechStack';
 import { Skills } from './sections/Skills';
-import { LatestProject } from './sections/LatestProject';
+import { Services } from './sections/Services';
+
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
 import '../../styles/global.css';
@@ -23,13 +24,12 @@ export const PortfolioPage = () => {
             <main className="max-w-7xl mx-auto px-6 pt-24 pb-12 relative z-10">
                 <Hero />
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                    <div className="lg:col-span-2">
-                        <Experience />
-                    </div>
-                    <div className="lg:col-span-1">
-                        <TechStack />
-                    </div>
+                <div className="mb-8">
+                    <Experience />
+                </div>
+
+                <div className="mb-8">
+                    <TechStack />
                 </div>
 
                 <div className="mb-8">
@@ -40,8 +40,10 @@ export const PortfolioPage = () => {
                     <Skills />
                 </div>
 
-                <div className="mb-8">
-                    <LatestProject />
+
+
+                <div className="mb-24">
+                    <Services />
                 </div>
 
                 <Contact />

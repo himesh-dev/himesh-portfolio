@@ -3,6 +3,30 @@ import { navbarData } from '../../../config/data';
 
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 100;
+
+            for (const item of navbarData.links) {
+                const sectionId = item.href.substring(1);
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const offsetTop = element.offsetTop;
+                    const offsetHeight = element.offsetHeight;
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(sectionId);
+                        return;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Check on mount
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 glass-header px-6 py-4 transition-all duration-300">
@@ -15,13 +39,19 @@ export const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
-                    {navbarData.links.map((item) => (
-                        <a key={item.name} className="text-sm font-medium text-text-secondary hover:text-primary transition-colors relative group" href={item.href}>
-                            {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                        </a>
-                    ))}
+                <div className="hidden md:flex items-center gap-2">
+                    {navbarData.links.map((item) => {
+                        const isActive = activeSection === item.href.substring(1);
+                        return (
+                            <a
+                                key={item.name}
+                                className={`text-sm font-medium px-4 py-2 nav-link ${isActive ? 'active' : 'text-text-secondary hover:text-white'}`}
+                                href={item.href}
+                            >
+                                {item.name}
+                            </a>
+                        );
+                    })}
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -39,11 +69,19 @@ export const Navbar = () => {
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full glass-header p-4 flex flex-col gap-4 border-t border-border">
-                    {navbarData.links.map((item) => (
-                        <a key={item.name} className="text-sm font-medium text-text-secondary hover:text-primary" href={item.href}>
-                            {item.name}
-                        </a>
-                    ))}
+                    {navbarData.links.map((item) => {
+                        const isActive = activeSection === item.href.substring(1);
+                        return (
+                            <a
+                                key={item.name}
+                                className={`text-sm font-medium px-4 py-2 nav-link w-full ${isActive ? 'active' : 'text-text-secondary hover:text-white'}`}
+                                href={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {item.name}
+                            </a>
+                        );
+                    })}
                 </div>
             )}
         </nav>

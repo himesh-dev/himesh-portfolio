@@ -35,6 +35,10 @@
     --glass-input-focus-bg: rgba(255, 255, 255, 0.05);
     --glass-input-focus-border-color: rgba(147, 51, 234, 0.5);
     --glass-input-focus-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
+
+    /* Gradients & Glows */
+    --gradient-primary: linear-gradient(to right, #a855f7, #3b82f6);
+    --shadow-glow-purple: 0 0 15px rgba(168, 85, 247, 0.5);
   }
 }
 
@@ -165,4 +169,43 @@
   border-color: var(--glass-input-focus-border-color);
   outline: none;
   box-shadow: var(--glass-input-focus-shadow);
+}
+
+/* Navigation Link Styles */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  background: transparent;
+  transition: all 0.3s ease;
+  /* Ensure border space is reserved */
+}
+
+/* Hover and Active State */
+.nav-link:hover,
+.nav-link.active {
+  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+              var(--gradient-primary) border-box;
+  border: 1px solid transparent; /* Required for gradient border */
+  box-shadow: var(--shadow-glow-purple);
+  color: white;
+}
+
+/* Button Glow Effect */
+.btn-glow {
+  position: relative;
+  transition: all 0.3s ease;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+              var(--gradient-primary) border-box !important; /* Override glass-panel background */
+  border: 1px solid transparent !important; /* Override glass-panel border */
+  box-shadow: var(--shadow-glow-purple) !important;
+  color: white;
 }

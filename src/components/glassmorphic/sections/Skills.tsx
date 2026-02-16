@@ -2,10 +2,10 @@ import { skillsData } from '../../../config/data';
 
 export const Skills = () => {
     return (
-        <section className="space-y-6 scroll-reveal-card" style={{ animationDelay: '0.4s' }}>
+        <section className="space-y-6 scroll-reveal-card" id="skills" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center justify-between px-2">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-                    <span className="w-2 h-8 bg-purple-500 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]"></span>
+                    <span className="w-2 h-8 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]"></span>
                     Skills
                 </h2>
             </div>

@@ -144,7 +144,7 @@ export const ContactForm = () => {
             ) : (
                 <form onSubmit={onSubmit} className="grid grid-cols-1 gap-8 relative z-10 p-6 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 relative">
                             <label htmlFor="name" className="text-sm font-medium text-slate-300 ml-1">Name <span className="text-purple-400">*</span></label>
                             <input
                                 id="name"
@@ -161,10 +161,10 @@ export const ContactForm = () => {
                                     }`}
                             />
                             {touched.name && errors.name && (
-                                <p className="text-red-400 text-xs ml-1">{errors.name}</p>
+                                <p className="text-red-400 text-xs ml-1 absolute -bottom-5 left-0">{errors.name}</p>
                             )}
                         </div>
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 relative">
                             <label htmlFor="email" className="text-sm font-medium text-slate-300 ml-1">Email <span className="text-purple-400">*</span></label>
                             <input
                                 id="email"
@@ -181,7 +181,7 @@ export const ContactForm = () => {
                                     }`}
                             />
                             {touched.email && errors.email && (
-                                <p className="text-red-400 text-xs ml-1">{errors.email}</p>
+                                <p className="text-red-400 text-xs ml-1 absolute -bottom-5 left-0">{errors.email}</p>
                             )}
                         </div>
                     </div>
@@ -199,7 +199,7 @@ export const ContactForm = () => {
                             className="w-full glass-input px-4 py-3 text-white placeholder:text-slate-600 outline-none focus:border-purple-500/50 hover:border-purple-500/50 hover:bg-white/5 transition-all duration-300"
                         />
                     </div>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 relative">
                         <label htmlFor="message" className="text-sm font-medium text-slate-300 ml-1">Message <span className="text-purple-400">*</span></label>
                         <textarea
                             id="message"
@@ -215,7 +215,7 @@ export const ContactForm = () => {
                                 }`}
                         ></textarea>
                         {touched.message && errors.message && (
-                            <p className="text-red-400 text-xs ml-1">{errors.message}</p>
+                            <p className="text-red-400 text-xs ml-1 absolute -bottom-5 left-0">{errors.message}</p>
                         )}
                     </div>
 

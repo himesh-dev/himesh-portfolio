@@ -1,4 +1,5 @@
-import himesh from '../assets/himesh.png';
+import himeshJpg from '../assets/himesh.jpg';
+import himeshWebp from '../assets/himesh.webp';
 import { SiTiktok, SiPaypal, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiNodedotjs, SiGithubactions, SiVite, SiStorybook } from 'react-icons/si';
 import { FaMoneyBillWave, FaShoppingCart, FaCode, FaProjectDiagram } from 'react-icons/fa';
 import { MdMovie, MdPalette, MdSpeed, MdViewQuilt, MdGroups, MdAutorenew } from 'react-icons/md';
@@ -10,7 +11,10 @@ export const navbarData = {
     links: [
         { name: "About", href: "#about" },
         { name: "Experience", href: "#experience" },
+        { name: "Tech Stack", href: "#tech-stack" },
+        { name: "Education", href: "#education" },
         { name: "Skills", href: "#skills" },
+        { name: "Services", href: "#services" },
         { name: "Contact", href: "#contact" },
     ],
 };
@@ -23,12 +27,16 @@ export const heroData = {
         text: "AVAILABLE FOR SENIOR ROLES",
         color: "purple", // Used for logic if needed
     },
+    location: "Singapore",
+    email: "askhimesh1@gmail.com",
     // Summarized from your Professional Summary [cite: 6, 7, 8]
     description: "Senior Frontend Engineer with 7.5+ years of experience scaling high-impact frontend systems. Specializing in Design System Architecture and Developer Experience (DX) at TikTok and PayPal. Proven track record of automating 99% of design workflows.",
-    image: himesh.src,
+    images: {
+        jpg: himeshJpg,
+        webp: himeshWebp,
+    },
     socials: [
         { name: "Email Me", icon: "mail", action: "mailto:askhimesh1@gmail.com" }, // [cite: 4]
-        { name: "Call", icon: "call", action: "tel:+6581591831" }, // [cite: 3]
         { name: "LinkedIn", icon: "linkedin", action: "https://linkedin.com/in/himesh-kumar" }, // [cite: 4]
     ],
     stats: [
@@ -145,14 +153,14 @@ export const techStackData = [
     // Mapped from Technical Skills section [cite: 11, 12, 13, 14, 15]
     { label: "React", Icon: SiReact, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
     { label: "TypeScript", Icon: SiTypescript, colorClass: "text-blue-300", hoverColorClass: "group-hover:text-blue-300", bgHoverColorClass: "group-hover:bg-blue-500", borderColorClass: "group-hover:border-blue-300" },
+    { label: "JavaScript", Icon: SiJavascript, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "Next.js", Icon: SiNextdotjs, colorClass: "text-white", hoverColorClass: "group-hover:text-white", bgHoverColorClass: "group-hover:bg-gray-800", borderColorClass: "group-hover:border-white" },
-    { label: "React Native", Icon: SiReact, colorClass: "text-cyan-400", hoverColorClass: "group-hover:text-cyan-400", bgHoverColorClass: "group-hover:bg-cyan-600", borderColorClass: "group-hover:border-cyan-400" },
     { label: "Node.js", Icon: SiNodedotjs, colorClass: "text-green-400", hoverColorClass: "group-hover:text-green-400", bgHoverColorClass: "group-hover:bg-green-600", borderColorClass: "group-hover:border-green-400" },
-    { label: "Design Systems", Icon: MdPalette, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
+    { label: "Design  ̰Systems", Icon: MdPalette, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
+    { label: "React Native", Icon: SiReact, colorClass: "text-cyan-400", hoverColorClass: "group-hover:text-cyan-400", bgHoverColorClass: "group-hover:bg-cyan-600", borderColorClass: "group-hover:border-cyan-400" },
     { label: "Performance", Icon: MdSpeed, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "CI/CD", Icon: SiGithubactions, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
     { label: "Webpack/Vite", Icon: SiVite, colorClass: "text-yellow-500", hoverColorClass: "group-hover:text-yellow-500", bgHoverColorClass: "group-hover:bg-yellow-700", borderColorClass: "group-hover:border-yellow-500" },
-    { label: "JavaScript", Icon: SiJavascript, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "Storybook", Icon: SiStorybook, colorClass: "text-pink-500", hoverColorClass: "group-hover:text-pink-500", bgHoverColorClass: "group-hover:bg-pink-700", borderColorClass: "group-hover:border-pink-500" },
     { label: "Component Libs", Icon: MdViewQuilt, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
 ];
@@ -165,23 +173,16 @@ export const skillsData = [
     { label: "Software Architecture", Icon: FaProjectDiagram, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
     { label: "Agile", Icon: SiJira, colorClass: "text-blue-500", hoverColorClass: "group-hover:text-blue-500", bgHoverColorClass: "group-hover:bg-blue-700", borderColorClass: "group-hover:border-blue-500" },
     { label: "Scrum", Icon: SiScrumalliance, colorClass: "text-green-500", hoverColorClass: "group-hover:text-green-500", bgHoverColorClass: "group-hover:bg-green-700", borderColorClass: "group-hover:border-green-500" },
+    { label: "Mentorship", Icon: MdGroups, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
+    { label: "Cross Team Collaboration", Icon: MdGroups, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
 ];
 
-export const latestProjectData = {
-    // Highlighted your "Figma-to-Canvas" plugin work [cite: 23]
-    title: "Figma-to-Canvas Automation Plugin",
-    description: "Engineered a custom plugin that slashed design-to-code translation time from hours to minutes, achieving 99% process automation for the TikTok team.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZ9KGcoHEnLBuUc1Zv01qMsQfbGg9I-DiWQV2VVvYWj-zEM8pMI_myQ3mtIRGSzXsgoECbTl5ObVT0TTzqX98K0KGbXFTxyL-H6bC0DyAl1HPs1iVoMWU2hbYzKQp0BYjXyGb-bIn3SKiVSL01IyasVwylqXaPJ9l0FZwdvg_opuCyelS-_lYnGVlQhdRvDvJ50UeTYK4jrVHprIflZ9MyQCggUbpVF36O5fzeJfuxO9lit2yMqn_1LpWEUyXDOEEko4matOjT-Q8", // Placeholder
-    tags: [
-        { name: "PLUGIN DEV", color: "blue" },
-        { name: "DX", color: "purple" },
-        { name: "AUTOMATION", color: "green" }
-    ],
-    links: [
-        { name: "Demo", icon: "visibility", url: "#" },
-        { name: "Case Study", icon: "article", url: "#" }
-    ]
-};
+export const servicesData = [
+    { title: "Web Development", description: "Building high-performance, responsive web applications using modern technologies.", icon: FaCode, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+    { title: "UI/UX Design", description: "Crafting intuitive and visually stunning user interfaces with a focus on user experience.", icon: MdPalette, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+    { title: "Frontend Architecture", description: "Designing scalable and maintainable frontend architectures for complex applications.", icon: FaProjectDiagram, color: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20" },
+    { title: "Technical Consulting", description: "Providing expert advice on technology stack selection, best practices, and performance optimization.", icon: MdGroups, color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
+];
 
 export const portfolioData = {
     navbar: navbarData,
@@ -190,5 +191,5 @@ export const portfolioData = {
     education: educationData,
     techStack: techStackData,
     skills: skillsData,
-    latestProject: latestProjectData
+    services: servicesData,
 };

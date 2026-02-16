@@ -6,18 +6,21 @@ import resume from '../../../assets/Himesh_8YOE.pdf';
 
 export const Hero = () => {
     return (
-        <section className="glass-panel rounded-xl p-8 md:p-16 relative overflow-hidden group scroll-shrink-hero mb-8 transition-all duration-300 mt-4">
+        <section className="glass-panel rounded-xl p-8 md:p-16 relative overflow-hidden group scroll-shrink-hero mb-8 transition-all duration-300 mt-4" id="about">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 relative z-10 justify-center">
                 <div className="relative flex-shrink-0 animate-float order-first">
                     <div className="w-40 h-40 md:w-56 md:h-56 rounded-full p-[2px] bg-gradient-to-br from-primary via-blue-500 to-transparent shadow-blue-glow">
                         <div className="w-full h-full rounded-full overflow-hidden bg-bg-primary relative">
-                            <img
-                                alt={`Professional headshot of ${heroData.name} ${heroData.surname}`}
-                                className="w-full h-full object-cover"
-                                src={heroData.image}
-                            />
+                            <picture>
+                                <source srcSet={heroData.images.webp.src} type="image/webp" />
+                                <img
+                                    alt={`Professional headshot of ${heroData.name} ${heroData.surname}`}
+                                    className="w-full h-full object-cover"
+                                    src={heroData.images.jpg.src}
+                                />
+                            </picture>
                         </div>
                     </div>
                     <div className="absolute bottom-6 right-4 w-6 h-6 bg-status-online border-4 border-bg-card rounded-full animate-pulse"></div>
@@ -51,7 +54,7 @@ export const Hero = () => {
                                 Download CV
                             </a>
 
-                            <a className="px-8 py-3.5 rounded-lg glass-panel hover:bg-bg-hover text-text-primary font-medium transition-all flex items-center gap-2 border border-white/5 hover:border-white/20" href="#contact">
+                            <a className="px-8 py-3.5 rounded-lg glass-panel text-text-primary font-medium transition-all flex items-center gap-2 btn-glow" href="#contact">
                                 <span className="material-icons text-sm">mail</span>
                                 Contact Me
                             </a>

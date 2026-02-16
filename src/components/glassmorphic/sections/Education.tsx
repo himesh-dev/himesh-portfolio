@@ -2,10 +2,10 @@ import { educationData } from '../../../config/data';
 
 export const Education = () => {
     return (
-        <section className="space-y-6">
+        <section className="space-y-6" id="education">
             <div className="flex items-center justify-between px-2">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-                    <span className="w-2 h-8 bg-purple-600 rounded-full shadow-[0_0_10px_rgba(147,51,234,0.5)]"></span>
+                    <span className="w-2 h-8 bg-orange-500 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.5)]"></span>
                     Education
                 </h2>
             </div>

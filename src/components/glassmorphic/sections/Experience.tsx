@@ -15,10 +15,10 @@ export const Experience = () => {
     };
 
     return (
-        <section className="space-y-6 scroll-reveal-card">
+        <section className="space-y-6 scroll-reveal-card" id="experience">
             <div className="flex items-center justify-between px-2">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-                    <span className="w-2 h-8 bg-primary rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+                    <span className="w-2 h-8 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
                     Experience
                 </h2>
                 <div className="flex gap-2">
