@@ -33,7 +33,7 @@ export const Hero = () => {
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-text-primary mb-2 tracking-tighter leading-[0.9]">
                         {heroData.name}<br />
-                        <span className="bg-gradient-to-r from-accent-purple to-accent-purple-dark bg-clip-text text-transparent">{heroData.surname}</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600 pb-2 pr-2">{heroData.surname}.</span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-blue-400 font-medium mb-6 h-8 transition-opacity duration-500" id="dynamic-text">
@@ -56,7 +56,7 @@ export const Hero = () => {
                                 Contact Me
                             </a>
 
-                            <div className="flex items-center gap-3 ml-2 pl-4 border-l border-white/10">
+                            <div className="flex items-center gap-3 ml-0 pl-0 md:ml-2 md:pl-4 md:border-l border-white/10 w-full md:w-auto justify-center md:justify-start mt-4 md:mt-0">
                                 <a
                                     href="https://linkedin.com/in/himesh-kumar"
                                     target="_blank"
