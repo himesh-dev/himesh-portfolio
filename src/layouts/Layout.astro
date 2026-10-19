@@ -25,6 +25,18 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={favicon.src} />
 		<link rel="mask-icon" href={favicon.src} color="#7e22ce" />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={Astro.url} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Person',
+			name: `${heroData.name} ${heroData.surname}`,
+			jobTitle: heroData.title,
+			url: Astro.url.href,
+			email: heroData.email,
+			address: { '@type': 'PostalAddress', addressCountry: 'SG' },
+			sameAs: ['https://linkedin.com/in/himesh-kumar', 'https://github.com/himesh-dev'],
+		})} />
 		<meta name="theme-color" content="#0a0a0a" />
 		<meta name="msapplication-TileColor" content="#0a0a0a" />
 
@@ -57,12 +69,6 @@ const {
 			import { registerSW } from 'virtual:pwa-register';
 			registerSW({
 				immediate: true,
-				onRegisteredSW(swUrl, r) {
-					console.log(`Service Worker at: ${swUrl}`);
-				},
-				onRegisterError(error) {
-					console.log('SW registration error', error);
-				},
 			});
 		</script>
 	</head>

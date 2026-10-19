@@ -1,9 +1,8 @@
 import himeshJpg from '../assets/himesh.jpg';
 import himeshWebp from '../assets/himesh.webp';
-import { SiTiktok, SiPaypal, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiNodedotjs, SiGithubactions, SiVite, SiStorybook } from 'react-icons/si';
+import { SiTiktok, SiPaypal, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiNodedotjs, SiGithubactions, SiPython, SiPostgresql, SiGraphql, SiAmazonwebservices, SiGooglecloud, SiPnpm, SiAnthropic, SiFirebase } from 'react-icons/si';
 import { FaMoneyBillWave, FaShoppingCart, FaCode, FaProjectDiagram } from 'react-icons/fa';
-import { MdMovie, MdPalette, MdSpeed, MdViewQuilt, MdGroups, MdAutorenew } from 'react-icons/md';
-import { SiScrumalliance, SiJira } from 'react-icons/si';
+import { MdMovie, MdSpeed, MdGroups, MdAutorenew, MdViewQuilt, MdDevices } from 'react-icons/md';
 
 export const navbarData = {
     initials: "HK",
@@ -22,39 +21,40 @@ export const navbarData = {
 export const heroData = {
     name: "HIMESH",
     surname: "KUMAR",
-    title: "Senior Frontend Engineer",
+    title: "Lead Full Stack Engineer",
     status: {
-        text: "AVAILABLE FOR SENIOR ROLES",
+        text: "AVAILABLE FOR LEAD ROLES",
         color: "purple", // Used for logic if needed
     },
     location: "Singapore",
     email: "askhimesh1@gmail.com",
-    // Summarized from your Professional Summary [cite: 6, 7, 8]
-    description: "Senior Frontend Engineer with 7.5+ years of experience scaling high-impact frontend systems. Specializing in Design System Architecture and Developer Experience (DX) at TikTok and PayPal. Proven track record of automating 99% of design workflows.",
+    description: "Lead Full Stack Engineer with 8 years of experience building distributed systems, scalable architectures and metadata-driven UI platforms at TikTok and PayPal. Specializing in micro-frontends with Module Federation, Node.js/Python automation pipelines, Agentic AI workflows and CI/CD release governance for high-traffic, multi-regional applications.",
     images: {
         jpg: himeshJpg,
         webp: himeshWebp,
     },
     socials: [
-        { name: "Email Me", icon: "mail", action: "mailto:askhimesh1@gmail.com" }, // [cite: 4]
-        { name: "LinkedIn", icon: "linkedin", action: "https://linkedin.com/in/himesh-kumar" }, // [cite: 4]
+        { name: "Email Me", icon: "mail", action: "mailto:askhimesh1@gmail.com" },
+        { name: "LinkedIn", icon: "linkedin", action: "https://linkedin.com/in/himesh-kumar" },
     ],
     stats: [
-        { icon: 'verified', label: '7.5+ Years Exp.' }, // [cite: 6]
-        { icon: 'speed', label: 'Performance' }, // [cite: 13]
-        { icon: 'code', label: 'Architecture' } // [cite: 7]
+        { icon: 'verified', label: '8 Years Exp.' },
+        { icon: 'speed', label: 'Performance' },
+        { icon: 'code', label: 'Architecture' }
     ]
 };
 
 export const experienceData = [
     {
-        role: 'Senior Frontend Engineer, E-commerce',
+        role: 'Senior Full Stack Engineer, E-commerce (Pearl SEA)',
         company: 'TikTok Pte Ltd',
-        period: 'May 2023 - Present', // [cite: 20]
+        period: 'May 2023 - Present',
         description: [
-            'Architected the SEA platform, implementing an isolated region-specific design strategy that boosted deployment velocity by 50%.', // [cite: 25]
-            'Engineered a custom Figma-to-Canvas plugin slashing design-to-code translation time, achieving 99% automation.', // [cite: 23]
-            'Led technical collaboration and onboarding for the Tokopedia engineering team during a major acquisition.' // [cite: 21]
+            'Own the SEA Business Component Library: architected the full-stack, metadata-driven platform (including backend services) where business metrics dynamically determine component rendering, improving cross-team developer efficiency by 60-70%.',
+            'Architected the SEA e-commerce platform from the ground up with micro-frontends and Module Federation, with isolated regional API layers and data fetching strategies that boosted regional deployment velocity by 50%.',
+            'Built a Figma-to-Canvas web extension and custom backend pipeline generating Fabric.js code, cutting turnaround from 24+ hours to under a minute and scaling multi-lingual templates from 20 to 500+ for peak sales events.',
+            'Maintain monorepo infrastructure (EdenX, Emo, Nx, pnpm) and automate GitLab CI/CD pipelines, catching regressions with Playwright and Jest.',
+            'Standardized the technical architecture for the Tokopedia acquisition, mentoring engineers through code reviews to ensure a zero-downtime regional launch.'
         ],
         color: 'bg-black',
         borderColor: 'border-l-black',
@@ -65,11 +65,11 @@ export const experienceData = [
     {
         role: 'Software Engineer 2',
         company: 'PayPal India Pvt Ltd',
-        period: 'May 2021 - Apr 2023', // [cite: 29]
+        period: 'May 2021 - Apr 2023',
         description: [
-            'Led the regional frontend launch of PayPal Working Capital in France and Netherlands.', // [cite: 30]
-            'Spearheaded the migration of "Osprey" tool from Angular to React.js, boosting developer productivity by 30%.', // [cite: 32, 33]
-            'Collaborated to integrate dynamic marketing tiles, driving increased user engagement for credit products.' // [cite: 34]
+            'Led the frontend architecture for the regional expansion of PayPal Working Capital, collaborating with backend teams on data contracts; earned a Spot Award for end-to-end delivery.',
+            'Contributed to the Node.js Backend-for-Frontend (BFF) layer: identified a critical client-side rendering bottleneck and shifted A/B testing logic to the BFF, eliminating redundant client-server roundtrips and preventing UI flicker for localized content.',
+            'Defined the roadmap for migrating the internal "Osprey" tool from Angular to React, increasing developer productivity by 30%.'
         ],
         color: 'bg-blue-600',
         borderColor: 'border-l-blue-600',
@@ -79,10 +79,11 @@ export const experienceData = [
     },
     {
         role: 'Software Engineer, Frontend',
-        company: 'Psi Phi Global Solutions (OkCredit)',
-        period: 'Feb 2021 - Apr 2021', // [cite: 38]
+        company: 'OkCredit',
+        period: 'Feb 2021 - Apr 2021',
         description: [
-            'Architected a secure merchant payment platform, owning the frontend from initial design concepts to production launch.' // [cite: 39]
+            'Drove the frontend production rollout of a secure merchant payment platform, integrating REST APIs to process 150,000+ daily transactions with 99.9% reliability.',
+            'Optimized checkout for 2G/3G networks with Server-Side Rendering, reducing First Contentful Paint by 1.8 seconds and boosting checkout conversions by 12%.'
         ],
         color: 'bg-green-600',
         borderColor: 'border-l-green-600',
@@ -93,10 +94,11 @@ export const experienceData = [
     {
         role: 'Software Development Engineer 1',
         company: 'Pocket Aces Pictures',
-        period: 'May 2020 - Jan 2021', // [cite: 43]
+        period: 'May 2020 - Jan 2021',
         description: [
-            'Owned the complete architectural overhaul of the main streamer dashboard using Redux, improving stability.', // [cite: 44]
-            'Built the "GetLocoNow" event platform with integrated conversion analytics to track user acquisition.' // [cite: 45]
+            'Engineered the viewer dashboard with Next.js (SSR) and the streamer dashboard with React (CSR); cut re-renders and improved TTI via lazy loading, bundle splitting and a Context-to-Redux migration.',
+            'Integrated HLS/DASH video streaming and a real-time WebSockets chat; introduced design tokens and theming.',
+            'Built a Gatsby link-sharing gateway generating dynamic Open Graph and Twitter meta tags for SEO.'
         ],
         color: 'bg-purple-500',
         borderColor: 'border-l-purple-500',
@@ -107,10 +109,9 @@ export const experienceData = [
     {
         role: 'Frontend Developer',
         company: 'AWOK Online Service',
-        period: 'Jan 2020 - Apr 2020', // [cite: 137]
+        period: 'Jan 2020 - Apr 2020',
         description: [
-            'Developed the vendor onboarding flow for the AWOK marketplace web app.', // [cite: 141, 142]
-            'Collaborated with multiple teams and stakeholders to streamline seller registration.' // [cite: 143]
+            'Developed the vendor onboarding flow with React and TypeScript, adhering strictly to API contracts negotiated with backend teams.'
         ],
         color: 'bg-red-500',
         borderColor: 'border-l-red-500',
@@ -119,12 +120,12 @@ export const experienceData = [
         iconBg: 'bg-red-500/10'
     },
     {
-        role: 'Software Engineer (Full Stack & Mobile)',
+        role: 'Software Engineer (Frontend & Mobile)',
         company: 'Codeyug Web Services',
-        period: 'Oct 2018 - Jan 2020', // [cite: 49]
+        period: 'Oct 2018 - Jan 2020',
         description: [
-            'Owned end-to-end creation of the "PedNeuroAiims" diagnostic mobile app (React Native) and deployed to App Stores.', // [cite: 50]
-            'Developed the "Assess Prep" invigilation app implementing real-time data synchronization.' // [cite: 51]
+            'Architected and deployed the "PedNeuroAiims" mobile app: React Native client plus secure REST APIs backed by PostgreSQL on GCP.',
+            'Engineered the "AssessPrep" invigilation platform with Firebase real-time data synchronization to manage live assessment states.'
         ],
         color: 'bg-teal-500',
         borderColor: 'border-l-teal-500',
@@ -136,9 +137,9 @@ export const experienceData = [
 
 export const educationData = [
     {
-        degree: "B.Tech in Electronics & Communication", // [cite: 53]
-        institution: "Techno India", // [cite: 53]
-        period: "2014 - 2018", // [cite: 54]
+        degree: "B.Tech in Electronics & Communication",
+        institution: "Techno India",
+        period: "2014 - 2018",
         icon: "school",
         colorStart: "from-purple-900",
         colorEnd: "to-indigo-900",
@@ -150,38 +151,39 @@ export const educationData = [
 ];
 
 export const techStackData = [
-    // Mapped from Technical Skills section [cite: 11, 12, 13, 14, 15]
     { label: "React", Icon: SiReact, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
     { label: "TypeScript", Icon: SiTypescript, colorClass: "text-blue-300", hoverColorClass: "group-hover:text-blue-300", bgHoverColorClass: "group-hover:bg-blue-500", borderColorClass: "group-hover:border-blue-300" },
     { label: "JavaScript", Icon: SiJavascript, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "Next.js", Icon: SiNextdotjs, colorClass: "text-white", hoverColorClass: "group-hover:text-white", bgHoverColorClass: "group-hover:bg-gray-800", borderColorClass: "group-hover:border-white" },
     { label: "Node.js", Icon: SiNodedotjs, colorClass: "text-green-400", hoverColorClass: "group-hover:text-green-400", bgHoverColorClass: "group-hover:bg-green-600", borderColorClass: "group-hover:border-green-400" },
-    { label: "Design  ̰Systems", Icon: MdPalette, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
-    { label: "React Native", Icon: SiReact, colorClass: "text-cyan-400", hoverColorClass: "group-hover:text-cyan-400", bgHoverColorClass: "group-hover:bg-cyan-600", borderColorClass: "group-hover:border-cyan-400" },
-    { label: "Performance", Icon: MdSpeed, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
     { label: "CI/CD", Icon: SiGithubactions, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
-    { label: "Webpack/Vite", Icon: SiVite, colorClass: "text-yellow-500", hoverColorClass: "group-hover:text-yellow-500", bgHoverColorClass: "group-hover:bg-yellow-700", borderColorClass: "group-hover:border-yellow-500" },
-    { label: "Storybook", Icon: SiStorybook, colorClass: "text-pink-500", hoverColorClass: "group-hover:text-pink-500", bgHoverColorClass: "group-hover:bg-pink-700", borderColorClass: "group-hover:border-pink-500" },
-    { label: "Component Libs", Icon: MdViewQuilt, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
+    { label: "Python", Icon: SiPython, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
+    { label: "PostgreSQL", Icon: SiPostgresql, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
+    { label: "GraphQL", Icon: SiGraphql, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
+    { label: "AWS", Icon: SiAmazonwebservices, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
+    { label: "GCP", Icon: SiGooglecloud, colorClass: "text-cyan-400", hoverColorClass: "group-hover:text-cyan-400", bgHoverColorClass: "group-hover:bg-cyan-600", borderColorClass: "group-hover:border-cyan-400" },
+    { label: "Firebase", Icon: SiFirebase, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
+    { label: "Micro-Frontends", Icon: MdViewQuilt, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
+    { label: "Playwright", Icon: MdSpeed, colorClass: "text-green-400", hoverColorClass: "group-hover:text-green-400", bgHoverColorClass: "group-hover:bg-green-600", borderColorClass: "group-hover:border-green-400" },
+    { label: "pnpm / Nx", Icon: SiPnpm, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
+    { label: "LLMs / Agentic AI", Icon: SiAnthropic, colorClass: "text-purple-400", hoverColorClass: "group-hover:text-purple-400", bgHoverColorClass: "group-hover:bg-purple-600", borderColorClass: "group-hover:border-purple-400" },
 ];
 
-
-
 export const skillsData = [
-    { label: "Team Management", Icon: MdGroups, colorClass: "text-purple-400", hoverColorClass: "group-hover:text-purple-400", bgHoverColorClass: "group-hover:bg-purple-600", borderColorClass: "group-hover:border-purple-400" },
-    { label: "End-to-End SDLC", Icon: MdAutorenew, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
-    { label: "Software Architecture", Icon: FaProjectDiagram, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
-    { label: "Agile", Icon: SiJira, colorClass: "text-blue-500", hoverColorClass: "group-hover:text-blue-500", bgHoverColorClass: "group-hover:bg-blue-700", borderColorClass: "group-hover:border-blue-500" },
-    { label: "Scrum", Icon: SiScrumalliance, colorClass: "text-green-500", hoverColorClass: "group-hover:text-green-500", bgHoverColorClass: "group-hover:bg-green-700", borderColorClass: "group-hover:border-green-500" },
-    { label: "Mentorship", Icon: MdGroups, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
-    { label: "Cross Team Collaboration", Icon: MdGroups, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
+    { label: "Distributed Systems", Icon: FaProjectDiagram, colorClass: "text-orange-400", hoverColorClass: "group-hover:text-orange-400", bgHoverColorClass: "group-hover:bg-orange-600", borderColorClass: "group-hover:border-orange-400" },
+    { label: "Server-Driven UI", Icon: MdDevices, colorClass: "text-pink-400", hoverColorClass: "group-hover:text-pink-400", bgHoverColorClass: "group-hover:bg-pink-600", borderColorClass: "group-hover:border-pink-400" },
+    { label: "BFF Architecture", Icon: MdSpeed, colorClass: "text-yellow-400", hoverColorClass: "group-hover:text-yellow-400", bgHoverColorClass: "group-hover:bg-yellow-600", borderColorClass: "group-hover:border-yellow-400" },
+    { label: "RAG & AI Workflows", Icon: MdAutorenew, colorClass: "text-blue-400", hoverColorClass: "group-hover:text-blue-400", bgHoverColorClass: "group-hover:bg-blue-600", borderColorClass: "group-hover:border-blue-400" },
+    { label: "Technical Leadership", Icon: MdGroups, colorClass: "text-purple-400", hoverColorClass: "group-hover:text-purple-400", bgHoverColorClass: "group-hover:bg-purple-600", borderColorClass: "group-hover:border-purple-400" },
+    { label: "Mentorship", Icon: MdGroups, colorClass: "text-indigo-400", hoverColorClass: "group-hover:text-indigo-400", bgHoverColorClass: "group-hover:bg-indigo-600", borderColorClass: "group-hover:border-indigo-400" },
+    { label: "CI/CD Governance", Icon: SiGithubactions, colorClass: "text-green-400", hoverColorClass: "group-hover:text-green-400", bgHoverColorClass: "group-hover:bg-green-600", borderColorClass: "group-hover:border-green-400" },
 ];
 
 export const servicesData = [
-    { title: "Web Development", description: "Building high-performance, responsive web applications using modern technologies.", icon: FaCode, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
-    { title: "UI/UX Design", description: "Crafting intuitive and visually stunning user interfaces with a focus on user experience.", icon: MdPalette, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
-    { title: "Frontend Architecture", description: "Designing scalable and maintainable frontend architectures for complex applications.", icon: FaProjectDiagram, color: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20" },
-    { title: "Technical Consulting", description: "Providing expert advice on technology stack selection, best practices, and performance optimization.", icon: MdGroups, color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
+    { title: "Full Stack Platforms", description: "Designing metadata-driven, server-driven UI platforms with Node.js/Python backends.", icon: FaCode, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+    { title: "Micro-Frontends & BFF", description: "Module Federation architectures and Backend-for-Frontend layers for multi-regional apps.", icon: FaProjectDiagram, color: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20" },
+    { title: "AI Workflow Automation", description: "Agentic AI and LLM-powered pipelines that turn day-long manual workflows into minutes.", icon: MdAutorenew, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+    { title: "Technical Leadership", description: "Architecture standards, code reviews, mentoring and CI/CD release governance.", icon: MdGroups, color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
 ];
 
 export const portfolioData = {

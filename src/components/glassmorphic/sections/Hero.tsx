@@ -2,7 +2,7 @@
 import { heroData } from '../../../config/data';
 import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { FaWhatsapp } from 'react-icons/fa';
-import resume from '../../../assets/Himesh_8YOE.pdf';
+import resume from '../../../assets/Himesh_FS_8YOE.pdf';
 
 export const Hero = () => {
     return (
@@ -30,7 +30,7 @@ export const Hero = () => {
                     <div className="scroll-fade-content flex flex-col items-center md:items-start">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider mb-6">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                            OPEN FOR OPPORTUNITIES
+                            {heroData.status.text}
                         </div>
                     </div>
 
@@ -49,12 +49,12 @@ export const Hero = () => {
                         </p>
 
                         <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                            <a href={resume} download="Himesh_CV.pdf" className="px-8 py-3.5 rounded-lg bg-primary hover:bg-blue-600 text-white font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 flex items-center gap-2 group/btn">
+                            <a href={resume} download="Himesh_Kumar_Resume.pdf" className="px-8 py-3.5 rounded-lg bg-primary hover:bg-blue-600 text-white font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 flex items-center gap-2 group/btn">
                                 <span className="material-icons text-sm group-hover/btn:animate-bounce">download</span>
                                 Download CV
                             </a>
 
-                            <a className="px-8 py-3.5 rounded-lg glass-panel text-text-primary font-medium transition-all flex items-center gap-2 btn-glow" href="#contact">
+                            <a className="px-8 py-3.5 rounded-lg glass-panel text-text-primary font-medium transition-all flex items-center gap-2 btn-glow" href={`mailto:${heroData.email}`}>
                                 <span className="material-icons text-sm">mail</span>
                                 Contact Me
                             </a>

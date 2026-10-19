@@ -25,7 +25,7 @@ export const Contact = () => {
                             </h2>
 
                             <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                                I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                                I'm open to discussing senior and lead full-stack roles, architecture challenges and collaboration.
                             </p>
 
                             <div className="flex flex-col gap-6">

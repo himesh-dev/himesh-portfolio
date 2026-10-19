@@ -18,7 +18,7 @@ export const Footer = () => {
                             <span className="text-white font-bold tracking-tight text-lg">HIMESH KUMAR</span>
                         </div>
                         <p className="text-slate-400 text-sm leading-relaxed">
-                            Building digital products, brands, and experiences with a focus on motion and usability.
+                            Building scalable full-stack platforms, micro-frontends and AI-powered workflows.
                         </p>
                     </div>
 
@@ -48,7 +48,7 @@ export const Footer = () => {
                             </span>
                         </button>
                         <p className="text-slate-500 text-sm text-right">
-                            &copy; 2018 All rights reserved.<br />Made with ❤️ by Himesh
+                            &copy; {new Date().getFullYear()} All rights reserved.<br />Made with ❤️ by Himesh
                         </p>
                     </div>
                 </div>

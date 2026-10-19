@@ -12,7 +12,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   output: 'static',
  
-  // Replace with your own domain or GitHub Pages URL
+  // GitHub Pages URL
   site: 'https://himesh-dev.github.io',
   base: '/himesh-portfolio', 
   
@@ -28,7 +28,7 @@ export default defineConfig({
       manifest: {
         name: 'Himesh Kumar - Portfolio',
         short_name: 'Himesh',
-        description: 'Senior Frontend Engineer Portfolio',
+        description: 'Lead Full Stack Engineer Portfolio',
         theme_color: '#0a0a0a',
         background_color: '#0a0a0a',
         display: 'standalone',
